@@ -11,7 +11,7 @@ endif
 
 .PHONY: all left clean_firmware clean_image clean
 
-all:
+all: config/adv360.keymap
 	$(shell bin/get_version_local.sh clique >> /dev/null)
 	$(DOCKER) build --tag zmk --file Dockerfile .
 	$(DOCKER) run --rm -it --name zmk \
@@ -23,7 +23,7 @@ all:
 		zmk
 	git checkout config/version.dtsi
 
-left:
+left: config/adv360.keymap
 	$(shell bin/get_version_local.sh clique >> /dev/null)
 	$(DOCKER) build --tag zmk --file Dockerfile .
 	$(DOCKER) run --rm -it --name zmk \
@@ -34,6 +34,9 @@ left:
 		-e BUILD_RIGHT=false \
 		zmk
 	git checkout config/version.dtsi
+
+config/adv360.keymap: config/gen_keymap.py $(wildcard config/*.csv)
+	cd config; python3 gen_keymap.py > adv360.keymap
 
 clean_firmware:
 	rm -f firmware/*.uf2
