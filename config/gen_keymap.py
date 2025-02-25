@@ -31,7 +31,7 @@ KEYMAP_FILE_TEMPLATE = '''
           label = "HOMEROW_MODS";
           #binding-cells = <2>;
           tapping-term-ms = <200>;
-          quick_tap_ms = <0>;
+          quick_tap_ms = <175>;
           flavor = "balanced";
           bindings = <&kp>, <&kp>;
       }};
@@ -41,7 +41,7 @@ KEYMAP_FILE_TEMPLATE = '''
           label = "THUMB_MODS";
           #binding-cells = <2>;
           tapping-term-ms = <200>;
-          quick_tap_ms = <0>;
+          quick_tap_ms = <175>;
           flavor = "balanced";
           bindings = <&mo>, <&kp>;
       }};
@@ -51,7 +51,6 @@ KEYMAP_FILE_TEMPLATE = '''
           label = "MOUSE_LAYER_MODS";
           #binding-cells = <2>;
           tapping-term-ms = <200>;
-          quick_tap_ms = <175>;
           flavor = "hold-preferred";
           bindings = <&mo>, <&tog>;
       }};
