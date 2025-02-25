@@ -1,5 +1,5 @@
-&kp F11,&kp F1,&kp F2,&kp F3,&kp F4,&kp F5,&kp F6,&kp F12,&kp F6,&kp F7,&kp F8,&kp F9,&kp F10,&kp DEL
-&trans,&kp Q,&kp W,&kp END,&kp R,&kp T,&trans,&trans,&msc SCRL_LEFT,&msc SCRL_DOWN,&msc SCRL_UP,&msc SCRL_RIGHT,&kp PSCRN,&kp BSLH
-&kp CAPSLOCK,&kp RSHFT,&kp RALT,&kp RGUI,&kp RCTRL,&trans,&trans,&trans,&trans,&trans,&trans,&trans,&kp LEFT,&kp DOWN,&kp UP,&kp RIGHT,&trans,&trans
-&kp LSHFT,&kp RC(PG_UP),&kp RC(PG_DN),&kp C,&mkp MCLK,&kp PG_UP,&trans,&trans,&kp N,&kp KP_N1,&mkp MB4,&mkp MB5,&trans,&trans
-&trans,&trans,&trans,&trans,&trans,&trans,&trans,&trans,&trans,&trans,&kp DEL,&trans,&trans,&trans,&trans,&trans
+&kp F11,&kp F1,&kp F2,&kp F3,&kp F4,&kp F5,&kp F6,,,,,,,&kp F12,&kp F6,&kp F7,&kp F8,&kp F9,&kp F10,&kp DEL
+&trans,&kp Q,&kp W,&kp END,&kp R,&kp T,&trans,,,,,,,&trans,&msc SCRL_LEFT,&msc SCRL_DOWN,&msc SCRL_UP,&msc SCRL_RIGHT,&kp PSCRN,&kp BSLH
+&kp CAPSLOCK,&kp RSHFT,&kp RALT,&kp RGUI,&kp RCTRL,&trans,&trans,,&trans,&trans,&trans,&trans,,&trans,&kp LEFT,&kp DOWN,&kp UP,&kp RIGHT,&trans,&trans
+&kp LSHFT,&kp RC(PG_UP),&kp RC(PG_DN),&kp C,&mkp MCLK,&kp PG_UP,,,,&trans,&trans,,,,&kp N,&kp KP_N1,&mkp MB4,&mkp MB5,&trans,&trans
+&trans,&trans,&trans,&trans,&trans,,,&trans,&trans,&trans,&trans,&trans,&kp DEL,,,&trans,&trans,&trans,&trans,&trans
