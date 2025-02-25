@@ -44,6 +44,16 @@ KEYMAP_FILE_TEMPLATE = '''
           flavor = "tap-preferred";
           bindings = <&mo>, <&kp>;
       }};
+
+      mlm: mouse_layer_mods {{
+          compatible = "zmk,behavior-hold-tap";
+          label = "MOUSE_LAYER_MODS";
+          #binding-cells = <2>;
+          tapping-term-ms = <250>;
+          quick_tap_ms = <225>;
+          flavor = "hold-preferred";
+          bindings = <&mo>, <&tog>;
+      }};
     }};
 
   keymap {{
@@ -55,7 +65,7 @@ KEYMAP_FILE_TEMPLATE = '''
 
 
 LAYERS = ("Base", "Secondary Left", "Secondary Right",
-          "Media", "Mod", "Original")
+          "Media", "Mouse", "Mod", "Original")
 
 
 def gen_layer(name: str, display_name: str, bindings: str):
