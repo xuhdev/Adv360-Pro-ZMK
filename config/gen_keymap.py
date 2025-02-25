@@ -16,6 +16,7 @@ KEYMAP_FILE_TEMPLATE = '''
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/stp.h>
 #include <dt-bindings/zmk/backlight.h>
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
 #include <dt-bindings/zmk/pointing.h>
 
 {layer_macros}
