@@ -30,8 +30,8 @@ KEYMAP_FILE_TEMPLATE = '''
           compatible = "zmk,behavior-hold-tap";
           label = "HOMEROW_MODS";
           #binding-cells = <2>;
-          tapping-term-ms = <225>;
-          quick_tap_ms = <200>;
+          tapping-term-ms = <200>;
+          quick_tap_ms = <175>;
           flavor = "tap-preferred";
           bindings = <&kp>, <&kp>;
       }};
@@ -40,8 +40,8 @@ KEYMAP_FILE_TEMPLATE = '''
           compatible = "zmk,behavior-hold-tap";
           label = "THUMB_MODS";
           #binding-cells = <2>;
-          tapping-term-ms = <225>;
-          quick_tap_ms = <200>;
+          tapping-term-ms = <200>;
+          quick_tap_ms = <175>;
           flavor = "tap-preferred";
           bindings = <&mo>, <&kp>;
       }};
@@ -50,8 +50,8 @@ KEYMAP_FILE_TEMPLATE = '''
           compatible = "zmk,behavior-hold-tap";
           label = "MOUSE_LAYER_MODS";
           #binding-cells = <2>;
-          tapping-term-ms = <225>;
-          quick_tap_ms = <200>;
+          tapping-term-ms = <200>;
+          quick_tap_ms = <175>;
           flavor = "hold-preferred";
           bindings = <&mo>, <&tog>;
       }};
