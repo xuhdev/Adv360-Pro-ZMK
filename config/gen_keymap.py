@@ -21,6 +21,10 @@ KEYMAP_FILE_TEMPLATE = '''
 
 {layer_macros}
 
+&caps_word {{
+    continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
+}};
+
 / {{
     behaviors {{
       #include "macros.dtsi"
