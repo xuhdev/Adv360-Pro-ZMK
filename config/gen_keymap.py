@@ -37,7 +37,8 @@ KEYMAP_FILE_TEMPLATE = '''
           #binding-cells = <2>;
           tapping-term-ms = <200>;
           quick_tap_ms = <175>;
-          flavor = "balanced";
+          require-prior-idle-ms = <125>;
+          flavor = "tap-preferred";
           bindings = <&kp>, <&kp>;
       }};
 
@@ -47,7 +48,8 @@ KEYMAP_FILE_TEMPLATE = '''
           #binding-cells = <2>;
           tapping-term-ms = <200>;
           quick_tap_ms = <175>;
-          flavor = "balanced";
+          require-prior-idle-ms = <125>;
+          flavor = "tap-preferred";
           bindings = <&mo>, <&kp>;
       }};
 
