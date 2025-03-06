@@ -42,6 +42,22 @@ KEYMAP_FILE_TEMPLATE = '''
           bindings = <&kp>, <&kp>;
       }};
 
+      hmlshift: hm_left_shifts {{
+          compatible = "zmk,behavior-mod-morph";
+          #binding-cells = <0>;
+          bindings = <&hm LSHIFT A>, <&kp A>;
+          mods = <(MOD_RSFT)>;
+          keep-mods = <(MOD_RSFT)>;
+      }};
+
+      hmrshift: hm_right_shifts {{
+          compatible = "zmk,behavior-mod-morph";
+          #binding-cells = <0>;
+          bindings = <&hm RSHIFT SEMI>, <&kp SEMI>;
+          mods = <(MOD_LSFT)>;
+          keep-mods = <(MOD_LSFT)>;
+      }};
+
       tm: thumb_mods {{
           compatible = "zmk,behavior-hold-tap";
           label = "THUMB_MODS";
