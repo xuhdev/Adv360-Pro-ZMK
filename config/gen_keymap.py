@@ -22,6 +22,9 @@ KEYMAP_FILE_TEMPLATE = '''
 
 {layer_macros}
 
+#define RMODS MOD_RCTL|MOD_RGUI|MOD_RALT|MOD_RSFT
+#define LMODS MOD_LCTL|MOD_LGUI|MOD_LALT|MOD_LSFT
+
 &caps_word {{
     continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
 }};
@@ -42,71 +45,87 @@ KEYMAP_FILE_TEMPLATE = '''
           bindings = <&kp>, <&kp>;
       }};
 
-      // Individual homerow mods. They forbid left + right same modifier to
-      // increase accuracy in typing the underlying key with the same modifier,
-      // such as Shift+A, Ctrl+F, etc.
+      // Individual homerow mods. They forbid a left modifier to be combined
+      // with a right modifier to increase accuracy in typing modifier + a
+      // homerow key, such as Shift+A, Ctrl+F, Ctrl+L, etc.
       hmlshift: hm_left_shift {{
           compatible = "zmk,behavior-mod-morph";
           #binding-cells = <0>;
           bindings = <&hm LSHIFT A>, <&kp A>;
-          mods = <(MOD_RSFT)>;
-          keep-mods = <(MOD_RSFT)>;
+          mods = <(RMODS)>;
+          keep-mods = <(RMODS)>;
       }};
 
       hmrshift: hm_right_shift {{
           compatible = "zmk,behavior-mod-morph";
           #binding-cells = <0>;
           bindings = <&hm RSHIFT SEMI>, <&kp SEMI>;
-          mods = <(MOD_LSFT)>;
-          keep-mods = <(MOD_LSFT)>;
+          mods = <(LMODS)>;
+          keep-mods = <(LMODS)>;
+      }};
+
+      hmlshifttab: hm_left_shift_tab {{
+          compatible = "zmk,behavior-mod-morph";
+          #binding-cells = <0>;
+          bindings = <&hm LSHIFT TAB>, <&kp TAB>;
+          mods = <(RMODS)>;
+          keep-mods = <(RMODS)>;
+      }};
+
+      hmrshiftbackslash: hm_right_shift_backslash {{
+          compatible = "zmk,behavior-mod-morph";
+          #binding-cells = <0>;
+          bindings = <&hm RSHIFT BSLH>, <&kp BSLH>;
+          mods = <(LMODS)>;
+          keep-mods = <(LMODS)>;
       }};
 
       hmlctrl: hm_left_ctrl {{
           compatible = "zmk,behavior-mod-morph";
           #binding-cells = <0>;
           bindings = <&hm LCTRL F>, <&kp F>;
-          mods = <(MOD_RCTL)>;
-          keep-mods = <(MOD_RCTL)>;
+          mods = <(RMODS)>;
+          keep-mods = <(RMODS)>;
       }};
 
       hmrctrl: hm_right_ctrl {{
           compatible = "zmk,behavior-mod-morph";
           #binding-cells = <0>;
           bindings = <&hm RCTRL J>, <&kp J>;
-          mods = <(MOD_LCTL)>;
-          keep-mods = <(MOD_LCTL)>;
+          mods = <(LMODS)>;
+          keep-mods = <(LMODS)>;
       }};
 
       hmlgui: hm_left_gui {{
           compatible = "zmk,behavior-mod-morph";
           #binding-cells = <0>;
           bindings = <&hm LGUI D>, <&kp D>;
-          mods = <(MOD_RGUI)>;
-          keep-mods = <(MOD_RGUI)>;
+          mods = <(RMODS)>;
+          keep-mods = <(RMODS)>;
       }};
 
       hmrgui: hm_right_gui {{
           compatible = "zmk,behavior-mod-morph";
           #binding-cells = <0>;
           bindings = <&hm RGUI K>, <&kp K>;
-          mods = <(MOD_LGUI)>;
-          keep-mods = <(MOD_LGUI)>;
+          mods = <(LMODS)>;
+          keep-mods = <(LMODS)>;
       }};
 
       hmlalt: hm_left_alt {{
           compatible = "zmk,behavior-mod-morph";
           #binding-cells = <0>;
           bindings = <&hm LALT S>, <&kp S>;
-          mods = <(MOD_RALT)>;
-          keep-mods = <(MOD_RALT)>;
+          mods = <(RMODS)>;
+          keep-mods = <(RMODS)>;
       }};
 
       hmralt: hm_right_alt {{
           compatible = "zmk,behavior-mod-morph";
           #binding-cells = <0>;
           bindings = <&hm RALT L>, <&kp L>;
-          mods = <(MOD_LALT)>;
-          keep-mods = <(MOD_LALT)>;
+          mods = <(LMODS)>;
+          keep-mods = <(LMODS)>;
       }};
 
       tm: thumb_mods {{
