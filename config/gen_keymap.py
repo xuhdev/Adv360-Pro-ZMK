@@ -157,7 +157,9 @@ KEYMAP_FILE_TEMPLATE = '''
 '''
 
 
-LAYERS = ("Base", "Secondary Left", "Secondary Right",
+LAYERS = ("Base",
+          "Extra White", "Extra Blue", "Extra Green", "Extra Red",
+          "Secondary Left", "Secondary Right",
           "Media", "Mouse", "Mod", "Original")
 
 
