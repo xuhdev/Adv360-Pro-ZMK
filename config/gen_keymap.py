@@ -160,6 +160,26 @@ KEYMAP_FILE_TEMPLATE = '''
                 , <&macro_tap &kp H &kp A &kp N &kp K &kp S>
                 ;
         }};
+        mcr_sg: mcr_sounds_good {{
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp RSHFT>
+                , <&macro_tap &kp S>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp O &kp U &kp N &kp D &kp S &kp SPACE &kp G &kp O &kp O &kp D &kp EXCLAMATION>
+                ;
+        }};
+        mcr_np: mcr_no_problem {{
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp RSHFT>
+                , <&macro_tap &kp N>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp O &kp SPACE &kp P &kp R &kp O &kp B &kp L &kp E &kp M &kp EXCLAMATION>
+                ;
+        }};
     }};
 
     keymap {{
