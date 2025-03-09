@@ -149,10 +149,23 @@ KEYMAP_FILE_TEMPLATE = '''
       }};
     }};
 
-  keymap {{
-    compatible = "zmk,keymap";
-    {keymaps}
-  }};
+    macros {{
+        mcr_thanks: mcr_thanks {{
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp RSHFT>
+                , <&macro_tap &kp T>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp H &kp A &kp N &kp K &kp S>
+                ;
+        }};
+    }};
+
+    keymap {{
+        compatible = "zmk,keymap";
+        {keymaps}
+    }};
 }};
 '''
 
