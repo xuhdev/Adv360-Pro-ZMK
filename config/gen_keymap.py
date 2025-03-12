@@ -38,9 +38,9 @@ KEYMAP_FILE_TEMPLATE = '''
           compatible = "zmk,behavior-hold-tap";
           label = "HOMEROW_MODS";
           #binding-cells = <2>;
-          tapping-term-ms = <200>;
-          quick_tap_ms = <175>;
-          require-prior-idle-ms = <125>;
+          tapping-term-ms = <300>;
+          quick_tap_ms = <275>;
+          require-prior-idle-ms = <0>;
           flavor = "balanced";
           bindings = <&kp>, <&kp>;
       }};
