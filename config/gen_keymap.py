@@ -147,6 +147,13 @@ KEYMAP_FILE_TEMPLATE = '''
           flavor = "hold-preferred";
           bindings = <&mo>, <&tog>;
       }};
+
+      tdl: tap_dance_lock {{
+          compatible = "zmk,behavior-tap-dance";
+          #binding-cells = <0>;
+          tapping-term-ms = <200>;
+          bindings = <&kp RGUI>, <&kp RG(RS(EQUAL))>;
+      }};
     }};
 
     macros {{
